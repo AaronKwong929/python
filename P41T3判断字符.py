@@ -4,4 +4,4 @@ if a.isdigit():
 elif a.isalpha():
     print("输入为字母。")
 else:
-    print("输入为其他。")
+    print("输入为其他fck you。")
