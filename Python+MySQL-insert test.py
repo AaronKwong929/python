@@ -28,4 +28,4 @@ try:
 except:
     print("ERROR:FAILED TO INSERT.")
     db.rollback()
-db.close()# w
+db.close()
