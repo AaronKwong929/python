@@ -9,7 +9,9 @@ headers = {
 def get_info(url):
     web_data = requests.get(url,headers = headers)
     soup = BeautifulSoup(web_data.text,'lxml')
-    ranks = soup.select('div.pc_temp_songlist > ul > li > span.pc_temp_num ')# #rankWrap > div.pc_temp_songlist > ul > li:nth-child(3) > span.pc_temp_num > strong   div.pc_temp_songlist > ul > li > span.pc_temp_num > strong
+    ranks = soup.select('div.pc_temp_songlist > ul > li > span.pc_temp_num ')# #rankWrap > div.pc_temp_songlist > ul > li:nth-child(3) > span.pc_temp_num > strong   
+    # div.pc_temp_songlist > ul > li > span.pc_temp_num > strong 此处观察网页只有1 2 3 是加粗部分，去掉strong后才可以爬取剩余4-500的排名，
+    # 所以位置应该为：'div.pc_temp_songlist > ul > li > span.pc_temp_num '
     titles = soup.select('div.pc_temp_songlist > ul > li > a') # 对歌手 - 歌名右键->检查->对弹出项COPY->SELECTOR 得到#rankWrap > div.pc_temp_songlist > ul > li:nth-child(1) > a 
     #可以确定'div.pc_temp_songlist > ul > li > a'
     times = soup.select('div.pc_temp_songlist > ul > li > span.pc_temp_tips_r > span') # #rankWrap > div.pc_temp_songlist > ul > li:nth-child(1) > span.pc_temp_tips_r > span 
