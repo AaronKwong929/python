@@ -24,13 +24,13 @@ def get_info(url):
         'div.pc_temp_songlist > ul > li > span.pc_temp_tips_r > span'
     )  # #rankWrap > div.pc_temp_songlist > ul > li:nth-child(1) > span.pc_temp_tips_r > span
     # 确定'div.pc_temp_songlist > ul > li > span.pc_temp_tips_r > span',教程上简写为span.pc_temp_tips_r > span，“由于某些标签是固定的，因此选用部分路径即可
-    for rank, title, time in zip(ranks, titles, times):
+    for rank, title, time1 in zip(ranks, titles, times):
         data = {
             '排位': rank.get_text().strip(),
             '歌手':
             title.get_text().split(' -')[0],  # 信息结构为 歌手 - 歌名，分片' -'把歌手后的空格去掉
             '歌名': title.get_text().split('- ')[1],  # 把'- '歌名前的空格去掉，取分片的第二部分
-            '时长': time.get_text().strip()
+            '时长': time1.get_text().strip()
         }
         print(data)
 
