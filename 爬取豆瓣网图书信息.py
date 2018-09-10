@@ -1,7 +1,7 @@
 from lxml import etree
 import requests
 import csv
-f = open('C://Users/Arron/Desktop/doubantop250.csv', 'wt', newline='', encoding='utf-8')  #  a不写utf-8会无法编译
+f = open('C://Users/Arron/Desktop/doubantop250.csv', 'wt', newline='', encoding='utf-8')  # a不写utf-8会无法编译
 writer = csv.writer(f)
 writer.writerow(('name', 'url', 'author', 'publisher', 'date', 'price', 'rate', 'comment'))
 

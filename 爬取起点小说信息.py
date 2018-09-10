@@ -9,7 +9,7 @@ all_info_list = []
 def get_info(url):
     html = requests.get(url)
     selector = etree.HTML(html.text)
-    infos = selector.xpath('//ul[@class="all-img-list cf"]/li')  #  找大标签
+    infos = selector.xpath('//ul[@class="all-img-list cf"]/li')  # 找大标签
     for info in infos:
         title = info.xpath('div[2]/h4/a/text()')[0]
         author = info.xpath('div[2]/p[1]/a[1]/text()')[0]
