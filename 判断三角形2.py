@@ -20,10 +20,10 @@ else:
         t = b
         b = c
         c = t
-    if a+b > c and a+c > b and b+c > a:
+    if a + b > c and a + c > b and b + c > a:
         print("构成三角形。")
-        s = (a+b+c)/2
-        area = math.sqrt(s*(s-a)*(s-b)*(s-c))
+        s = (a + b + c) / 2
+        area = math.sqrt(s * (s - a) * (s - b) * (s - c))
     if a == b and b == c:
         print("这是一个等边三角形。")
     elif a == b or a == c or b == c:
@@ -33,4 +33,3 @@ else:
     else:
         print("这是一个普通三角形")
         print("三角形的面积为：", area)
-
