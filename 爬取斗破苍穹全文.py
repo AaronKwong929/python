@@ -6,7 +6,7 @@ headers = {
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
 }
 
-f = open('C:/Users/lenovo/Desktop/dp.txt', 'a+')
+f = open('C://Users/Arron/Desktop/dp.txt', 'a+')
 
 
 def get_info(url):
@@ -23,8 +23,8 @@ def get_info(url):
 if __name__ == '__main__':
     urls = [
         'http://www.doupoxs.com/doupocangqiong/{}.html'.format(str(i))
-        for i in range(2, 5)
+        for i in range(2, 100)
     ]
     for url in urls:
         get_info(url)
-        f.close()
+    f.close()
