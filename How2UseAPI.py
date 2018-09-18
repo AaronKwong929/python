@@ -12,3 +12,6 @@ repo_dict = repo_dicts[0]  # 取字典内第一项
 print('repo_id:' + str(repo_dict['id']))  # 打印其中内容
 print('repo_name:' + repo_dict['name'])
 print(repo_dict['owner']['login'])  # 字典内嵌字典获取内容方式
+
+
+# 参考https://www.jianshu.com/p/d43c621d59fc
