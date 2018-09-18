@@ -1,4 +1,5 @@
 import jieba.analyse
+# 先运行爬取斗破苍穹全文.py
 path = 'C:/Users/Arron/Desktop/dp.txt'
 f = open(path, 'r')
 content = f.read()
