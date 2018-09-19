@@ -3,7 +3,7 @@ import requests
 import csv
 f = open('C://Users/Arron/Desktop/doubantop250.csv', 'wt', newline='', encoding='utf-8')  # a不写utf-8会无法编译
 writer = csv.writer(f)
-writer.writerow(('name', 'url', 'author', 'publisher', 'date', 'price', 'rate', 'comment'))
+writer.writerow(['name', 'url', 'author', 'publisher', 'date', 'price', 'rate', 'comment'])  # 不写[]会全部放在一个单元格内
 
 urls = ['https://book.douban.com/top250?start={}'.format(str(i)) for i in range(0, 250, 25)]
 
@@ -27,5 +27,5 @@ for url in urls:
         rate = info.xpath('td/div/span[2]/text()')[0]  # 此处不写span[2]就会把书本的原名爬取到 原因未明
         comments = info.xpath('td/p/span/text()')
         comment = comments[0] if len(comments) != 0 else "无"
-        writer.writerow((name, url, author, publisher, date, price, rate, comment))
+        writer.writerow([name, url, author, publisher, date, price, rate, comment])
 f.close()
