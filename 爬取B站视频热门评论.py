@@ -1,10 +1,10 @@
 from selenium import webdriver
 import time
 
+url = input('请输入B站视频链接：')
 browser = webdriver.Firefox()
 browser.maximize_window()
 # url = 'https://www.bilibili.com/video/av5067136?from=search&seid=17107287613613241939'
-url = input('请输入B站视频链接：')
 browser.get(url)
 browser.implicitly_wait(10)
 time.sleep(5)
