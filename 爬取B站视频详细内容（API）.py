@@ -3,13 +3,16 @@ import requests
 # 难点在于找api
 # 打开详细视频页面 F12 - network - F5 - XHR - response - 找需要的内容 
 # 获取到api网址https://api.bilibili.com/x/web-interface/view?aid=32127626 验证之
+# ps:b站视频信息的api地址都为：https://api.bilibili.com/x/web-interface/archive/stat?aid=  后面为av号数字
 # 接下来的都是json获取操作
-url = 'https://api.bilibili.com/x/web-interface/archive/stat?aid=32127626'
+av = input('请输入视频AV号后的数字：')
+url = 'https://api.bilibili.com/x/web-interface/archive/stat?aid={}'.format(str(av))
 time.sleep(2)
 r = requests.get(url)
 response_dict = r.json()
-print('播放量：', response_dict['data']['view'], '  弹幕数：',
-      response_dict['data']['danmaku'], 
+print('视频av号：' + 'av' + str(av),
+      '  播放量：', response_dict['data']['view'], 
+      '  弹幕数：', response_dict['data']['danmaku'], 
       '  推荐数：', response_dict['data']['like'],
       '  评论数：', response_dict['data']['reply'], 
       '  投币数：', response_dict['data']['coin'], 
