@@ -19,4 +19,5 @@ add1s = selector.xpath(
     '//div[@class="txt"]/div[@class="tag-addr"]/a[2]/span/text()')
 add2s = selector.xpath(
     '//div[@class="txt"]/div[@class="tag-addr"]/span/text()')
-print(names)
+for name, comment, average, style, add1, add2 in zip(names, comments, averages, styles, add1s, add2s):
+    print(name + '  评论数：' + comment + '  人均：' + average + '类型：' + style + '  地址：' + add1 + ' ' + add2)
