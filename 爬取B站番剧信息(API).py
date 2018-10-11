@@ -11,7 +11,6 @@ r_dict = r.json()
 
 print(r_dict.keys())
 for i in range(10):
-    # //*[@id="app"]/div[1]/div[2]/div/div[2]/div[4]/span/text()
     print(r_dict['result'][i]['title'] + 
         '\n地区：', r_dict['result'][i]['area'] ,
         '\n追番数：', r_dict['result'][i]['attention'] ,
@@ -21,7 +20,3 @@ for i in range(10):
         '\n最近更新时间：', r_dict['result'][i]['lastupdate_at'] ,
          '\n\n'
          )
-
-detail_url = "https://bangumi.bilibili.com/anime/{}"
-
-
