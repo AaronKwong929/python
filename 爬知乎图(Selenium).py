@@ -19,3 +19,7 @@ f = open("C:/Users/Arron/Desktop/photo/" + str('test')+".jpg", 'wb')
 f.write((urllib.request.urlopen(img_path)).read())
 f.close()
 browser.quit()
+
+# 正常语法下xpath应该为'//xxxx/xxx/xx/x/@href'
+# selenium下用xpath获取内容后获取属性的方法--> xxx = .find_element_by_x   xxx.get_attribute('href') 
+# https://blog.csdn.net/hacklyc/article/details/65454285
