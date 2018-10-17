@@ -22,6 +22,13 @@ browser.refresh()
 print('进入10秒隐式等待时间。')
 browser.implicitly_wait(10)
 
+'''
+for i in range(500):
+    # browser.execute_script('window.scrollTo(0,1000000)')
+    browser.find_element_by_xpath('//*[@id="root"]/div/main/div/div[1]/div[2]/div[2]/div/div/div[1]/button[1]').send_keys(Keys.ARROW_DOWN)
+
+'''
+# 滚动网页的正确解法↑
 # 开始爬图
 print('开始爬图。')
 src_links = []  # 列表存放src链接
