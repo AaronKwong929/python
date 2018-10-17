@@ -46,3 +46,4 @@ for src_link in src_links:
 # 无法用selenium模拟鼠标滚动
 # 使用time.sleep(20) 手动动态加载
 # 知乎要先做一个登陆才能看到刺激的图片
+# driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
