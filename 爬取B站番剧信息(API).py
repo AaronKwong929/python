@@ -12,11 +12,11 @@ r_dict = r.json()
 print(r_dict.keys())
 for i in range(10):
     print(r_dict['result'][i]['title'] + 
-        '\n地区：', r_dict['result'][i]['area'] ,
-        '\n追番数：', r_dict['result'][i]['attention'] ,
-        '\n弹幕数：', r_dict['result'][i]['danmaku_count'] ,
-        '\n播放量：', r_dict['result'][i]['play_count'] ,
-        '\n更新时间：每周', r_dict['result'][i]['weekday'] ,
-        '\n最近更新时间：', r_dict['result'][i]['lastupdate_at'] ,
+        '\n地区：', r_dict['result'][i]['area'],  # 可以写成r_dict['result']i['area']
+        '\n追番数：', r_dict['result'][i]['attention'],
+        '\n弹幕数：', r_dict['result'][i]['danmaku_count'],
+        '\n播放量：', r_dict['result'][i]['play_count'],
+        '\n更新时间：每周', r_dict['result'][i]['weekday'],
+        '\n最近更新时间：', r_dict['result'][i]['lastupdate_at'],
          '\n\n'
          )
