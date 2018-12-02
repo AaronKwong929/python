@@ -60,14 +60,13 @@ def admin_select():
         ssex = input('请输入学生性别：')
         sage = input('请输入学生年龄：')
         sgrade = input('请输入学生学分：')
-        sql = 'insert into student (sname, ssex, sgrade, sage)values("%s", "%s", "%s", "%s");' % (sname, ssex, sgrade, sage)
+        sql = 'update student set sname="%s", ssex="%s", sgrade="%s", sage="%s" where sno="%s";'% (sname, ssex, sgrade, sage, sno)
         cursor.execute(sql)
         db.commit()
         print('操作完成，返回继续操作')
         admin_select()
     elif(s == '4'):
         print('请选择需要统计的信息：\n1.不同职称老师的数量\t2.不同职称的老师的平均工资\t3.课程平均成绩\n')
-        admin_select()
     elif(s == '5'):
         exit()
     else:
