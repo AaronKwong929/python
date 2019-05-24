@@ -11,7 +11,7 @@ url = 'http://www.qq.com/'
 html = requests.get(url, headers=headers)
 selector = etree.HTML(html.text)
 # 以下是将大标签一直写到a标签之前，每一个新闻标题作为一个单独的列表存在，用[0]来输出新闻标题
-infos = selector.xpath('//*[@id="newsInfoQuanguo"]/div/div/ul/li')
+infos = selector.xpath('//*[@id="tab-news-01"]/ul[1]/li')
 for info in infos:
     name = info.xpath('a/text()')[0]
     print(name)
